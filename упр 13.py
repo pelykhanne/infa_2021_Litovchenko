@@ -1,0 +1,43 @@
+import turtle
+turtle.penup()
+turtle.goto(0,159)
+turtle.pendown()
+turtle.left(180)
+def down(t):
+    turtle.left(90)
+    turtle.forward(t)
+    turtle.right(90)
+def move(x,y):
+    turtle.penup()
+    turtle.goto(x,y)
+    turtle.pendown()
+def circlel(t):
+    for i in range (0,100):
+        turtle.forward(t)
+        turtle.left(360/100)
+def arc(t):
+    turtle.left(90)
+    for i in range (0,50):
+        turtle.forward(t)
+        turtle.right(360/100)
+    turtle.right(90)
+turtle.fillcolor('#480607')
+turtle.begin_fill()
+circlel(10)
+turtle.end_fill()
+move(-50,100)
+turtle.fillcolor('#f9faf0')
+turtle.begin_fill()
+circlel(2)
+turtle.end_fill()
+move(50,100)
+turtle.fillcolor('#f9faf0')
+turtle.begin_fill()
+circlel(2)
+turtle.end_fill()
+move(0,30)
+turtle.pencolor('#eb175a')
+turtle.width(20)
+down(80)
+move(111,-20)
+arc(7)
